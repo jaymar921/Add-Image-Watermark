@@ -14,9 +14,9 @@ namespace Watermark_Maker
              * 
             
             IWatermarkMaker watermarkMaker = new WatermarkMaker();
-            watermarkMaker.LoadImage("C:\\Users\\jayha\\OneDrive\\Desktop\\noWatermark\\IMG_0899.JPG");
-            watermarkMaker.AddWatermark("C:\\Users\\jayha\\OneDrive\\Desktop\\watermark.png");
-            watermarkMaker.SaveImage("C:\\Users\\jayha\\OneDrive\\Desktop\\withWatermark\\IMG_0899.JPG");
+            watermarkMaker.LoadImage("D:\\PathToNoWatermarkImages");
+            watermarkMaker.AddWatermark("D:\\myWatermark.png");
+            watermarkMaker.SaveImage("D:\\PathToSaveWatermarkedImages");
             
             */
 
