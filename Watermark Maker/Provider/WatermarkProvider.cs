@@ -17,7 +17,15 @@ namespace Watermark_Maker.Provider
         }
         public bool LoadImages(string path)
         {
-            var filePath = Directory.GetFiles(path);
+            string[]? filePath = null;
+            try
+            {
+                filePath = Directory.GetFiles(path);
+            }
+            catch
+            {
+                Console.WriteLine($"ERROR: Directory '{path}' does not exist");
+            }
             if (filePath == null)
                 return false;
 
