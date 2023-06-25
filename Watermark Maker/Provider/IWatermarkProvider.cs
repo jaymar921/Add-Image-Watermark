@@ -13,6 +13,7 @@ namespace Watermark_Maker.Provider
         public bool LoadWatermark(string path);
         public bool SetPosition(WatermarkPosition position);
         public bool SavePath(string path);
+        public bool LoadAndSave(string loadPath, string savePath, string watermarkPath);
         public bool Reset();
     }
 }

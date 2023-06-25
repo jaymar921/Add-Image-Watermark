@@ -24,6 +24,7 @@ namespace Watermark_Maker
             IWatermarkProvider provider = new WatermarkProvider();                           // creates the watermark provider
             IWatermarkProviderLogger providerLogger = new WatermarkProviderLogger(provider); // use this decorator for logging
 
+            /*
             // load the images based on file Path
             providerLogger.LoadImages("D:\\PathToNoWatermarkImages");
 
@@ -31,10 +32,12 @@ namespace Watermark_Maker
             providerLogger.LoadWatermark("D:\\myWatermark.png");
 
             // set the position of the watermark
-            providerLogger.SetPosition(WatermarkPosition.CENTER);
+            providerLogger.SetPosition(WatermarkPosition.BOTTOM_LEFT);
 
             // save the images based on file Path
             providerLogger.SavePath("D:\\PathToSaveWatermarkedImages");
+            */
+            provider.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,36 @@ namespace Watermark_Maker.Provider
         {
             watermarkMakers = new List<IWatermarkMaker>();
         }
+
+        public bool LoadAndSave(string loadPath, string savePath, string watermarkPath)
+        {
+            string[]? filePath = null;
+            try
+            {
+                filePath = Directory.GetFiles(loadPath);
+            }
+            catch
+            {
+                Console.WriteLine($"ERROR: Directory '{loadPath}' does not exist");
+            }
+            if (filePath == null)
+                return false;
+
+            foreach (var files in filePath)
+            {
+                var fileSplit = files.Split(new char[] {'\\','/'});
+                var fileName = fileSplit[fileSplit.Length - 1];
+
+                IWatermarkMaker watermarkMaker = new WatermarkMaker();
+                watermarkMaker.LoadImage(files);
+                watermarkMaker.AddWatermark(watermarkPath);
+                watermarkMaker.SaveImage(savePath + "\\" + fileName);
+                watermarkMaker.Reset();
+            }
+
+            return true;
+        }
+
         public bool LoadImages(string path)
         {
             string[]? filePath = null;

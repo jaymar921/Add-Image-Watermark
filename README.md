@@ -22,6 +22,10 @@ providerLogger.SetPosition(WatermarkPosition.CENTER);
 
 // save the images based on file Path
 providerLogger.SaveP("D:\\PathToSaveWatermarkedImages");
+
+// if you want to LoadAndSave faster, use the provider.LoadAndSave method
+// params: string:pathToNoWaterMarkImages, string:pathToSaveWatermarkedImages, string:watermarkFilepath
+provider.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png");
 ```
 
 

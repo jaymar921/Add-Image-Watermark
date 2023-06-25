@@ -9,8 +9,8 @@ namespace Watermark_Maker.Classes
 {
     public class WatermarkMaker : IWatermarkMaker
     {
-        private Image? image;
-        private Image? watermark;
+        private Bitmap? image;
+        private Bitmap? watermark;
         public string filename;
         private WatermarkPosition position = WatermarkPosition.BOTTOM_LEFT;
         public WatermarkMaker(string filename, string watermark)
@@ -30,7 +30,7 @@ namespace Watermark_Maker.Classes
         {
             try
             {
-                watermark = Image.FromFile(watermarkFilePath);
+                watermark = (Bitmap?)Image.FromFile(watermarkFilePath);
             }
             catch
             {
@@ -44,7 +44,7 @@ namespace Watermark_Maker.Classes
         {
             try
             {
-                image = Image.FromFile(filename);
+                image = (Bitmap?)Image.FromFile(filename);
             }catch
             {
                 Console.WriteLine($"ERROR: File does not exist or file path does not exist white trying to load {filename}");
@@ -69,6 +69,7 @@ namespace Watermark_Maker.Classes
                 return false;
             using(Graphics g = Graphics.FromImage(image))
             {
+                watermark = new Bitmap(watermark, new Size((int)(watermark.Width * 0.5), (int)(watermark.Height * 0.5)));
                 int x = GetX();
                 int y = GetY();
                 g.DrawImage(watermark, x, y, watermark.Width, watermark.Height);
