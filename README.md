@@ -23,15 +23,48 @@ providerLogger.SetPosition(WatermarkPosition.CENTER);
 // save the images based on file Path
 providerLogger.SaveP("D:\\PathToSaveWatermarkedImages");
 
-// if you want to LoadAndSave faster, use the provider.LoadAndSave method
-// params: string:pathToNoWaterMarkImages, string:pathToSaveWatermarkedImages, string:watermarkFilepath
-provider.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png");
+// if you want to LoadAndSave faster with watermark scaling feature, use the LoadAndSave method
+// params: string:pathToNoWaterMarkImages, string:pathToSaveWatermarkedImages, string:watermarkFilepath, double:scale
+providerLogger.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png", 1.0);
+```
+
+
+<p align="center">
+    <span style="color:orange;font-weight:700;font-size:20px;">
+        <img src="https://www.nuget.org/Content/gallery/img/logo-header.svg" width='200'>
+    </span>
+    <br/>
+    <a style="color:greenyellow;text-decoration:underline;" href="https://www.nuget.org/packages/JayMar.WatermarkAppender/1.0.0">JayMar.WatermarkAppender</a>
+</p>
+
+```cmd
+.NET CLI
+> dotnet add package JayMar.WatermarkAppender --version 1.0.0
+
+Package Manager
+PM> NuGet\Install-Package JayMar.WatermarkAppender -Version 1.0.0
+
+Package Reference
+<PackageReference Include="JayMar.WatermarkAppender" Version="1.0.0" />
+
+Paket CLI
+> paket add JayMar.WatermarkAppender --version 1.0.0
+
+Script & Interactive
+> #r "nuget: JayMar.WatermarkAppender, 1.0.0"
+
+Cake
+// Install JayMar.WatermarkAppender as a Cake Addin
+#addin nuget:?package=JayMar.WatermarkAppender&version=1.0.0
+
+// Install JayMar.WatermarkAppender as a Cake Tool
+#tool nuget:?package=JayMar.WatermarkAppender&version=1.0.0
 ```
 
 
 
-
 <div>
+<br/><br/><br/>
 <p align="center">
     <span style="color:orange;font-weight:700;font-size:20px;">
         Sample watermark
@@ -55,3 +88,7 @@ provider.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedIm
 <p align="center"><img src='Watermark%20Maker/Images/withWatermark/sampleImageCCTO.jpg' width='300px'></p>
 <p align="center">Sample image with watermark added</p>
 </div>
+
+
+
+

@@ -4,7 +4,7 @@ using Watermark_Maker.Provider;
 
 namespace Watermark_Maker
 {
-    public class Program
+    public class WatermarkMakerProgram
     {
         static void Main(string[] args)
         {
@@ -24,7 +24,7 @@ namespace Watermark_Maker
             IWatermarkProvider provider = new WatermarkProvider();                           // creates the watermark provider
             IWatermarkProviderLogger providerLogger = new WatermarkProviderLogger(provider); // use this decorator for logging
 
-            /*
+            
             // load the images based on file Path
             providerLogger.LoadImages("D:\\PathToNoWatermarkImages");
 
@@ -36,8 +36,9 @@ namespace Watermark_Maker
 
             // save the images based on file Path
             providerLogger.SavePath("D:\\PathToSaveWatermarkedImages");
-            */
-            provider.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png");
+
+            // loading and saving images at a the same time, scaling feature is included
+            providerLogger.LoadAndSave("D:\\PathToNoWatermarkImages", "D:\\PathToSaveWatermarkedImages", "D:\\myWatermark.png", 1.0);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Watermark_Maker.Classes
+namespace JayMar.WatermarkAppender.Classes
 {
     public interface IWatermarkMaker
     {

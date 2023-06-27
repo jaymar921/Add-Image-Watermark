@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watermark Maker", "Watermark Maker\Watermark Maker.csproj", "{D50968C9-EC1A-40C8-9F6E-755BF86BF900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watermark Maker", "Watermark Maker\Watermark Maker.csproj", "{D50968C9-EC1A-40C8-9F6E-755BF86BF900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JayMar.WatermarkAppender", "JayMar.WatermarkAppender\JayMar.WatermarkAppender.csproj", "{6E9983BB-5AAD-46A0-9D5B-B3F031E6CDC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D50968C9-EC1A-40C8-9F6E-755BF86BF900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D50968C9-EC1A-40C8-9F6E-755BF86BF900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D50968C9-EC1A-40C8-9F6E-755BF86BF900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9983BB-5AAD-46A0-9D5B-B3F031E6CDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9983BB-5AAD-46A0-9D5B-B3F031E6CDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9983BB-5AAD-46A0-9D5B-B3F031E6CDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9983BB-5AAD-46A0-9D5B-B3F031E6CDC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

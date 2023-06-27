@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Watermark_Maker.Classes;
+﻿using JayMar.WatermarkAppender.Classes;
 
-namespace Watermark_Maker.Decorator
+namespace JayMar.WatermarkAppender.Decorator
 {
     public interface IWatermarkProviderLogger
     {

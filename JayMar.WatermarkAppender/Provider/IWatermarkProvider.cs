@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Watermark_Maker.Classes;
+﻿using JayMar.WatermarkAppender.Classes;
 
-namespace Watermark_Maker.Decorator
+namespace JayMar.WatermarkAppender.Provider
 {
-    public interface IWatermarkProviderLogger
+    public interface IWatermarkProvider
     {
         /// <summary>
         /// Loads images from a Path, example: C:\LotsOfImagesFolder\
